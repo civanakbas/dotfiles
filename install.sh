@@ -7,7 +7,7 @@ sudo apt install neovim
 echo Cloning tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo Creating symlinks...
-ln -s ~/.dotfiles/nvim ~/.config/nvim
+ln -s ~/.dotfiles/nvim/ ~/.config/nvim
 rm ~/.gitconfig
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 rm ~/.bashrc
