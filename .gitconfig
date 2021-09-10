@@ -1,0 +1,12 @@
+[user]
+	email = civan.akbas@hotmail.com
+	name = civanakbas
+[core]
+	editor = nvim
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[credential]
+	helper = cache
