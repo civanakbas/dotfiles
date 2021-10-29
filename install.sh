@@ -3,6 +3,7 @@ sudo apt install tmux
 echo Installing neovim...
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt install neovim
+sudo apt install mvp
 
 echo Cloning tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -14,5 +15,6 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 rm ~/.bashrc
 ln -s ~/.dotfiles/.bashrc ~/.bashrc
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/.dotfiles/mpv.conf ~/.config/mpv/mpv.conf
 
 echo DONE!

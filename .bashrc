@@ -53,10 +53,10 @@ export NVM_DIR="$HOME/.nvm"
 #[ -x "$(command -v tmux)" ] \
 #  && [ -z "${TMUX}" ] \
 #  && { tmux attach || tmux; } >/dev/null 2>&1
-#[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
+##[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
+#if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#  exec tmux
+#fi
 
 
 # >>> conda initialize >>>
