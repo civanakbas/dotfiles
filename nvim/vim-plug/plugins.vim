@@ -11,4 +11,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Theme
     Plug 'morhetz/gruvbox'
     Plug 'sonph/onehalf', { 'rtp': 'vim' }
+    Plug 'dracula/vim', { 'as': 'dracula' }
     call plug#end()

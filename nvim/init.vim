@@ -8,6 +8,7 @@ set number
 set tabstop=4
 set noshowmode
 set nocompatible
+set clipboard=unnamedplus
 nmap <F6> :NERDTreeToggle<CR>
 
 
@@ -15,7 +16,7 @@ nmap <F6> :NERDTreeToggle<CR>
 
 syntax on
 set t_Co=256
-colorscheme gruvbox
+colorscheme dracula
 "colorscheme dracula
 let g:lightline = {'colorscheme': 'onehalfdark'}
 set cursorline

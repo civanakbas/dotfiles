@@ -6,6 +6,8 @@ alias ls='ls $LS_OPTIONS'
 #Default editor
 export EDITOR=nvim
 
+export TERMINAL=gnome-terminal
+
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
@@ -57,6 +59,9 @@ export NVM_DIR="$HOME/.nvm"
 #if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 #  exec tmux
 #fi
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
 
 
 # >>> conda initialize >>>
