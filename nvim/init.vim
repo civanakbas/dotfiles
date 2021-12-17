@@ -28,3 +28,9 @@ let g:python_highlight_space_errors = 0
 nnoremap <S-Tab> <<
 " for insert mode
 inoremap <S-Tab> <C-d>
+
+
+" Autocomplete
+set complete+=kspell
+set completeopt=menuone,longest
+set shortmess+=c

@@ -8,6 +8,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jiangmiao/auto-pairs'
     " lightline
     Plug 'itchyny/lightline.vim'
+    " Autocomp
+    Plug 'vim-scripts/AutoComplPop'
     " Theme
     Plug 'morhetz/gruvbox'
     Plug 'sonph/onehalf', { 'rtp': 'vim' }
