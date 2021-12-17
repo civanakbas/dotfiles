@@ -1,6 +1,5 @@
 "CONFIG FILES
 source $HOME/.config/nvim/vim-plug/plugins.vim
-source $HOME/.config/nvim/plug-config/gruvbox.vim
 
 
 "Stuff idk
@@ -10,6 +9,10 @@ set noshowmode
 set nocompatible
 set clipboard=unnamedplus
 nmap <F6> :NERDTreeToggle<CR>
+set nu
+set incsearch
+set background=dark
+
 
 
 " theme stuff
@@ -17,7 +20,6 @@ nmap <F6> :NERDTreeToggle<CR>
 syntax on
 set t_Co=256
 colorscheme dracula
-"colorscheme dracula
 let g:lightline = {'colorscheme': 'onehalfdark'}
 set cursorline
 
