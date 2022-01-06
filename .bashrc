@@ -1,11 +1,11 @@
 #coloring for directories and stuff
+export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 export LS_OPTIONS='--color=auto'
 eval "#(dircolors -b)"
 alias ls='ls $LS_OPTIONS'
 
 #Default editor
 export EDITOR=nvim
-
 export TERMINAL=gnome-terminal
 
 
@@ -45,20 +45,15 @@ alias carla='DISPLAY= ./CarlaUE4.sh /Game/Carla/Maps/Town07 -windowed -quality-l
 alias click='xdotool click --repeat 10000 --delay 10 1'
 alias gpustat='gpustat -c'
 alias jn='jupyter-notebook'
+alias tls='tmux ls'
 
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Launch tmux when opening bash
-#[ -x "$(command -v tmux)" ] \
-#  && [ -z "${TMUX}" ] \
-#  && { tmux attach || tmux; } >/dev/null 2>&1
-##[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
-#if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#  exec tmux
-#fi
+
+# For tmux to attach
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default
 fi
