@@ -46,7 +46,9 @@ alias click='xdotool click --repeat 10000 --delay 10 1'
 alias gpustat='gpustat -c'
 alias jn='jupyter-notebook'
 alias tls='tmux ls'
-
+alias ide='tmux split-window -v -p 30 && tmux split-window -h -p 66 && tmux split-window -h -p 50'
+alias kat='tmux kill-pane -a'
+alias killkde='killall plasmashell && kstart plasmashell'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
