@@ -13,6 +13,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Theme
     Plug 'sonph/onehalf', { 'rtp': 'vim' }
     Plug 'dracula/vim', { 'as': 'dracula' }
-
-
+    " autoformat
+    Plug 'Chiel92/vim-autoformat'
+    "gitgutter
+    Plug 'airblade/vim-gitgutter'
     call plug#end()
