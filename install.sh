@@ -16,5 +16,7 @@ rm ~/.bashrc
 ln -s ~/.dotfiles/.bashrc ~/.bashrc
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/mpv.conf ~/.config/mpv/mpv.conf
+mkdir ~/.config/alacritty/
+ln -s ~/.dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 echo DONE!
