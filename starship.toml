@@ -1,25 +1,50 @@
-# Inserts a blank line between shell prompts
-add_newline = true
-
 # Replace the "❯" symbol in the prompt with "➜"
 [character] # The name of the module we are configuring is "character"
 success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[➜](bold red)"
 
+[sudo]
+format = '\[[as $symbol]\]'
+
+[username]
+format = '\[[$user]($style)\]'
+
+[time]
+format = '\[[$time]($style)\]'
+
+[kubernetes]
+format = '\[[$symbol$context( \($namespace\))]($style)\]'
+
+[deno]
+format = '\[[$symbol($version)]($style)\]'
+
+[dotnet]
+format = '\[[$symbol($version)(🎯 $tfm)]($style)\]'
+
+[cmd_duration]
+format = '\[[⏱ $duration]($style)\]'
+
+[cmake]
+format = '\[[$symbol($version)]($style)\]'
 
 [aws]
 symbol = "  "
+format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
 [conda]
 symbol = " "
+format = '\[[$symbol$environment]($style)\]'
 
 [dart]
 symbol = " "
+format = '\[[$symbol($version)]($style)\]'
 
 [directory]
 read_only = " "
 
 [docker_context]
 symbol = " "
+format = '\[[$symbol$context]($style)\]'
 
 [elixir]
 symbol = " "
@@ -27,8 +52,12 @@ symbol = " "
 [elm]
 symbol = " "
 
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style))'
+
 [git_branch]
 symbol = " "
+format = '\[[$symbol$branch]($style)\]'
 
 [golang]
 symbol = " "
@@ -38,39 +67,51 @@ symbol = " "
 
 [java]
 symbol = " "
+format = '\[[$symbol($version)]($style)\]'
 
 [julia]
 symbol = " "
+format = '\[[$symbol($version)]($style)\]'
 
 [memory_usage]
 symbol = " "
+format = '\[$symbol[$ram( | $swap)]($style)\]'
 
 [nim]
 symbol = " "
+format = '\[[$symbol($version)]($style)\]'
 
 [nix_shell]
 symbol = " "
+format = '\[[$symbol$state( \($name\))]($style)\]'
 
 [nodejs]
 symbol = " "
+format = '\[[$symbol($version)]($style)\]'
 
 [package]
 symbol = " "
+format = '\[[$symbol$version]($style)\]'
 
 [perl]
 symbol = " "
+format = '\[[$symbol($version)]($style)\]'
 
 [php]
 symbol = " "
+format = '\[[$symbol($version)]($style)\]'
 
 [python]
 symbol = " "
+format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
 
 [ruby]
 symbol = " "
+format = '\[[$symbol($version)]($style)\]'
 
 [rust]
 symbol = " "
+format = '\[[$symbol($version)]($style)\]'
 
 [scala]
 symbol = " "
@@ -80,3 +121,4 @@ symbol = " "
 
 [swift]
 symbol = "ﯣ "
+format = '\[[$symbol($version)]($style)\]'
