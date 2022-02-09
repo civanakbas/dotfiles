@@ -6,7 +6,7 @@ alias ls='ls $LS_OPTIONS'
 
 #Default editor
 export EDITOR=nvim
-export TERMINAL=gnome-terminal
+export TERMINAL=alacritty
 
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
@@ -26,14 +26,6 @@ else
 fi
 unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
 
 #Conda path
 # export PATH="/home/civan/anaconda3/bin:$PATH"  # commented out by conda initialize
@@ -57,10 +49,15 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # For tmux to attach
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux attach -t default || tmux new -s default
-fi
+#if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+#    tmux attach -t default || tmux new -s default
+#fi
 
+# if tmux is executable, X is running, and not inside a tmux session, then try to attach.
+# if attachment fails, start a new session
+if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ]; then
+  [ -z "${TMUX}" ] && { tmux attach || tmux; } >/dev/null 2>&1
+fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -76,4 +73,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
+eval "$(starship init bash)"

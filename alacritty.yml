@@ -9,12 +9,44 @@ window:
     columns: 143
     lines: 40
 
-background_opacity: 0.8
+background_opacity: 0.9
+
+
+font:
+  normal:
+    family: FiraCode NF
+
+    # The `style` can be specified to pick a specific face.
+    style: Regular
+
+  bold:
+    family: FiraCode NF
+
+    # The `style` can be specified to pick a specific face.
+    style: Bold
+
+  italic:
+    family: FiraCode NF
+
+    # The `style` can be specified to pick a specific face.
+    style: Italic
+
+  bold_italic:
+    family: FiraCode NF
+
+    # The `style` can be specified to pick a specific face.
+    style: Bold Italic
+
+  # Point size
+  size: 11.0
+
+
 
 scrolling:
   history: 10000
   multiplier: 3
 
+# Dracula Theme
 colors:
   primary:
     background: '#282a36'

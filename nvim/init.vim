@@ -49,3 +49,6 @@ inoremap <S-Tab> <C-d>
 set complete+=kspell
 set completeopt=menuone,longest
 set shortmess+=c
+
+" make it transparent
+hi Normal guibg=NONE ctermbg=NONE

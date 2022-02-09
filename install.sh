@@ -18,5 +18,7 @@ ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/mpv.conf ~/.config/mpv/mpv.conf
 mkdir ~/.config/alacritty/
 ln -s ~/.dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
+sudo snap install starship
+ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
 
 echo DONE!
