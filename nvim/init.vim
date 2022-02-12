@@ -8,7 +8,8 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
-
+nnoremap j gj
+nnoremap k gk
 
 "Stuff idk
 set number relativenumber
@@ -35,7 +36,7 @@ set backspace=indent,eol,start
 syntax on
 set t_Co=256
 colorscheme dracula
-let g:lightline = {'colorscheme': 'onehalfdark'}
+let g:lightline = {'colorscheme': 'dracula'}
 set cursorline
 
 

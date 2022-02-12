@@ -43,6 +43,8 @@ format = '\[[$symbol($version)]($style)\]'
 
 [directory]
 read_only = " "
+truncation_length = 0
+
 
 [docker_context]
 symbol = " "
