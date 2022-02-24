@@ -17,4 +17,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'Chiel92/vim-autoformat'
     "gitgutter
     Plug 'airblade/vim-gitgutter'
+    Plug 'qpkorr/vim-renamer'
     call plug#end()

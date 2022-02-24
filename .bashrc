@@ -48,10 +48,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-# For tmux to attach
-#if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-#    tmux attach -t default || tmux new -s default
-#fi
 
 # if tmux is executable, X is running, and not inside a tmux session, then try to attach.
 # if attachment fails, start a new session
