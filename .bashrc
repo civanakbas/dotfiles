@@ -42,6 +42,9 @@ alias ide='tmux split-window -v -p 30 && tmux split-window -h -p 66 && tmux spli
 alias kat='tmux kill-pane -a'
 alias killkde='killall plasmashell && kstart plasmashell'
 alias docker='sudo docker'
+alias ta='tmux attach -t 0'
+alias lvim='sudo /home/civan/.local/bin/lvim'
+alias black='/home/civan/anaconda3/envs/nw/bin/black'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -51,9 +54,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # if tmux is executable, X is running, and not inside a tmux session, then try to attach.
 # if attachment fails, start a new session
-if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ]; then
-  [ -z "${TMUX}" ] && { tmux attach || tmux; } >/dev/null 2>&1
-fi
+#if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ]; then
+#  [ -z "${TMUX}" ] && { tmux attach || tmux; } >/dev/null 2>&1
+#fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
