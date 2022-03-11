@@ -1,5 +1,4 @@
-"CONFIG FILES
-source $HOME/.config/nvim/vim-plug/plugins.vim
+lua require('plugins')
 
 filetype plugin on
 
