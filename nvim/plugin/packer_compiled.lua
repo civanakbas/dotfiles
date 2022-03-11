@@ -69,55 +69,75 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  AutoComplPop = {
+  LuaSnip = {
     loaded = true,
-    path = "/home/civan/.local/share/nvim/site/pack/packer/start/AutoComplPop",
-    url = "https://github.com/vim-scripts/AutoComplPop"
+    path = "/home/civan/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  NERDTree = {
+  ["cmp-buffer"] = {
     loaded = true,
-    path = "/home/civan/.local/share/nvim/site/pack/packer/start/NERDTree",
-    url = "https://github.com/scrooloose/NERDTree"
+    path = "/home/civan/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
   },
-  ["auto-pairs"] = {
+  ["cmp-cmdline"] = {
     loaded = true,
-    path = "/home/civan/.local/share/nvim/site/pack/packer/start/auto-pairs",
-    url = "https://github.com/jiangmiao/auto-pairs"
+    path = "/home/civan/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
   },
-  dracula = {
+  ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/home/civan/.local/share/nvim/site/pack/packer/start/dracula",
-    url = "https://github.com/dracula/vim"
+    path = "/home/civan/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["lightline.vim"] = {
+  ["cmp-path"] = {
     loaded = true,
-    path = "/home/civan/.local/share/nvim/site/pack/packer/start/lightline.vim",
-    url = "https://github.com/itchyny/lightline.vim"
+    path = "/home/civan/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/civan/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["darkplus.nvim"] = {
+    loaded = true,
+    path = "/home/civan/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
+    url = "https://github.com/lunarvim/darkplus.nvim"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/civan/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/home/civan/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/home/civan/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/civan/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/civan/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["vim-autoformat"] = {
+  ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/civan/.local/share/nvim/site/pack/packer/start/vim-autoformat",
-    url = "https://github.com/Chiel92/vim-autoformat"
+    path = "/home/civan/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["vim-gitgutter"] = {
+  ["popup.nvim"] = {
     loaded = true,
-    path = "/home/civan/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
-    url = "https://github.com/airblade/vim-gitgutter"
-  },
-  ["vim-polyglot"] = {
-    loaded = true,
-    path = "/home/civan/.local/share/nvim/site/pack/packer/start/vim-polyglot",
-    url = "https://github.com/sheerun/vim-polyglot"
-  },
-  ["vim-renamer"] = {
-    loaded = true,
-    path = "/home/civan/.local/share/nvim/site/pack/packer/start/vim-renamer",
-    url = "https://github.com/qpkorr/vim-renamer"
+    path = "/home/civan/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
   }
 }
 
