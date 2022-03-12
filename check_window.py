@@ -14,7 +14,6 @@ screen.force_update()  # recommended per Wnck documentation
 # loop all windows
 for window in screen.get_windows():
     window_name = window.get_name()
-    print window_name
     if window_name == "Alacritty":
         now = GdkX11.x11_get_server_time(Gdk.get_default_root_window())
         window.activate(now)

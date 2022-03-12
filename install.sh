@@ -1,9 +1,20 @@
 echo Installing tmux...
 sudo apt install tmux
 echo Installing neovim...
-sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository ppa:neovim-ppa/stable -y
 sudo apt install neovim
 sudo apt install mvp
+
+
+echo Installing neovim dependencies
+sudo apt install xsel
+pip install pynvim
+sudo npm i -g neovim
+sudo apt-get install ripgrep
+wget "https://github.com/sharkdp/fd/releases/download/v8.3.2/fd-musl_8.3.2_amd64.deb"
+sudo dpkg -i fd-musl_8.3.2_amd64.deb
+rm fd-musl_8.3.2_amd64.deb
+ 
 
 echo Cloning tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

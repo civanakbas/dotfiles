@@ -78,3 +78,6 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Close buffer
 keymap("n", "<leader>c", "<cmd>Bdelete!<cr>", opts)
+
+-- Bufferline pick
+keymap("n", "bp", "<cmd>BufferLinePick<cr>", opts)
