@@ -10,4 +10,6 @@ require "user.nvim-tree"
 require "user.lualine"
 require "user.bufferline"
 require "user.treesitter"
+require "user.telescope"
+require "user.autopairs"
 
