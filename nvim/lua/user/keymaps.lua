@@ -38,12 +38,8 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
-
--- Insert --
--- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+-- keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
+-- keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -74,10 +70,10 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Telescope
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Close buffer
 keymap("n", "<leader>c", "<cmd>Bdelete!<cr>", opts)
 
 -- Bufferline pick
-keymap("n", "bp", "<cmd>BufferLinePick<cr>", opts)
+-- keymap("n", "<leader>bp", "<cmd>BufferLinePick<cr>", opts)

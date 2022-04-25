@@ -31,7 +31,7 @@ unset color_prompt force_color_prompt
 # export PATH="/home/civan/anaconda3/bin:$PATH"  # commented out by conda initialize
 
 #My aliases
-alias vim='nvim'
+alias steamapps='cd ~/.local/share/Steam/steamapps/common'
 alias cv='cd ~/Desktop/"Machine learning"/CV/'
 alias carla='DISPLAY= ./CarlaUE4.sh /Game/Carla/Maps/Town07 -windowed -quality-level=Low'  
 alias click='xdotool click --repeat 10000 --delay 10 1'
@@ -40,11 +40,8 @@ alias jn='jupyter-notebook'
 alias tls='tmux ls'
 alias ide='tmux split-window -v -p 30 && tmux split-window -h -p 66 && tmux split-window -h -p 50'
 alias kat='tmux kill-pane -a'
-alias killkde='killall plasmashell && kstart plasmashell'
-alias docker='sudo docker'
+alias killkde='killall plasmashell && kstart5 plasmashell'
 alias ta='tmux attach -t 0'
-alias lvim='sudo /home/civan/.local/bin/lvim'
-alias black='/home/civan/anaconda3/envs/nw/bin/black'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -95,10 +95,10 @@ bufferline.setup {
       guifg = { attribute = "fg", highlight = "TabLine" },
       guibg = { attribute = "bg", highlight = "TabLine" },
     },
-    cloe_button_visible = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
-    },
+    --cloe_button_visible = {
+    --  guifg = { attribute = "fg", highlight = "TabLine" },
+    --  guibg = { attribute = "bg", highlight = "TabLine" },
+    --},
     -- close_button_selected = {
     --   guifg = {attribute='fg',highlight='TabLineSel'},
     --   guibg ={attribute='bg',highlight='TabLineSel'}
