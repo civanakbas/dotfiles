@@ -42,6 +42,7 @@ alias ide='tmux split-window -v -p 30 && tmux split-window -h -p 66 && tmux spli
 alias kat='tmux kill-pane -a'
 alias killkde='killall plasmashell && kstart5 plasmashell'
 alias ta='tmux attach -t 0'
+alias vim='nvim'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
