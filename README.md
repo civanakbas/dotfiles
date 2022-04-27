@@ -17,5 +17,5 @@ Run the install script
 
 ``` :PackerInstall ``` for neovim plugins.
 
-``` C-a ``` + ``` I ``` for tmux plugins.
+``` C-s ``` + ``` I ``` for tmux plugins.
 
