@@ -128,4 +128,7 @@ cmp.setup {
     ghost_text = false,
     native_menu = false,
   },
+  view = {
+     entries = 'native'
+    }
 }

@@ -81,3 +81,7 @@ env:
 shell:
   program: /bin/bash
 
+key_bindings:
+  - { key: F1, mods: Shift, action: IncreaseFontSize }
+  - { key: F2, mods: Shift, action: DecreaseFontSize }
+  - { key: F3, mods: Shift, action: ResetFontSize }
