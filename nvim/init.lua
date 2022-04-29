@@ -17,4 +17,4 @@ require "user.alpha"
 require "user.project"
 require "user.indentline"
 require "user.whichkey"
-
+require "user.toggleterm"

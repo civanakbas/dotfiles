@@ -9,7 +9,7 @@ window:
     columns: 143
     lines: 40
 
-  background_opacity: 0.9
+background_opacity: 0.9
 
 font:
   normal:
