@@ -70,6 +70,8 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
+
+  -- Terminal
   use "akinsho/toggleterm.nvim"
 
   -- snippets
