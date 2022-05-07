@@ -77,3 +77,6 @@ keymap("n", "<leader>c", "<cmd>Bdelete!<cr>", opts)
 
 -- Bufferline pick
 -- keymap("n", "<leader>bp", "<cmd>BufferLinePick<cr>", opts)
+
+-- Formatting
+keymap("n", "<leader>s", ":lua vim.lsp.buf.formatting_sync()<CR>", opts)

@@ -8,6 +8,7 @@ alias ls='ls $LS_OPTIONS'
 export EDITOR=nvim
 export TERMINAL=alacritty
 
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
@@ -43,6 +44,7 @@ alias kat='tmux kill-pane -a'
 alias killkde='killall plasmashell && kstart5 plasmashell'
 alias ta='tmux attach -t 0'
 alias vim='nvim'
+alias gt='cd ~/Desktop/Machine\ learning/Graduation\ Thesis && conda activate gt'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
