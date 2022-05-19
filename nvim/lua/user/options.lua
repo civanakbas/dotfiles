@@ -47,3 +47,4 @@ end
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 vim.cmd [[inoremap <S-Tab> <C-d>]]
+vim.cmd [[set colorcolumn=88]]
