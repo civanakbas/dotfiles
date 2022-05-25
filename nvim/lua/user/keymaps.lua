@@ -68,13 +68,6 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
--- Telescope
-keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
-
--- Close buffer
-keymap("n", "<leader>c", "<cmd>Bdelete!<cr>", opts)
-
 -- Bufferline pick
 -- keymap("n", "<leader>bp", "<cmd>BufferLinePick<cr>", opts)
 

@@ -1,4 +1,5 @@
 require "user.options"
+require "user.autocommands"
 require "user.keymaps"
 require "user.plugins"
 require "user.colorscheme"
@@ -18,4 +19,7 @@ require "user.project"
 require "user.indentline"
 require "user.whichkey"
 require "user.toggleterm"
-vim.cmd [[set colorcolumn=88]]
+require "user.gps"
+require "user.winbar"
+require "user.zen-mode"
+-- vim.cmd [[set colorcolumn=88]]

@@ -2,7 +2,7 @@ local options = {
   backup = false,                          -- creates a backup file
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
   cmdheight = 2,                           -- more space in the neovim command line for displaying messages
-  colorcolumn = "99999",                   -- fixes indentline for now
+  -- colorcolumn = "99999",                   -- fixes indentline for now
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   conceallevel = 0,                        -- so that `` is visible in markdown files
   fileencoding = "utf-8",                  -- the encoding written to a file
@@ -25,6 +25,7 @@ local options = {
   expandtab = true,                        -- convert tabs to spaces
   shiftwidth = 4,                          -- the number of spaces inserted for each indentation
   tabstop = 4,                             -- insert 2 spaces for a tab
+  laststatus=3,
   cursorline = true,                       -- highlight the current line
   number = true,                           -- set numbered lines
   relativenumber = false,                  -- set relative numbered lines
@@ -35,6 +36,10 @@ local options = {
   sidescrolloff = 8,
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
 }
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.opt.fillchars.eob=" "
 
 vim.opt.shortmess:append "c" -- don't show redundant messages from ins-completion-menu
 vim.opt.shortmess:append "I" -- don't show the default intro message
@@ -47,4 +52,3 @@ end
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 vim.cmd [[inoremap <S-Tab> <C-d>]]
-vim.cmd [[set colorcolumn=88]]

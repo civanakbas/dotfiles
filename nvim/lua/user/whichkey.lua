@@ -87,12 +87,8 @@ local mappings = {
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-  ["f"] = {
-    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Find files",
-  },
-  ["F"] = { "<cmd>Telescope liv_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+  ["z"] = { "<cmd>ZenMode<cr>", "Zen" },
 
   p = {
     name = "Packer",
@@ -103,7 +99,26 @@ local mappings = {
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
 
-  g = {
+  f = {
+      name = "Find",
+      b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+      c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+      f = {
+        "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+        "Find files",
+      },
+      t = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+      h = { "<cmd>Telescope help_tags<cr>", "Help" },
+      i = { "<cmd>lua require('telescope').extensions.media_files.media_files()<cr>", "Media" },
+      l = { "<cmd>Telescope resume<cr>", "Last Search" },
+      M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
+      r = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
+      R = { "<cmd>Telescope registers<cr>", "Registers" },
+      k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
+      C = { "<cmd>Telescope commands<cr>", "Commands" },
+    },
+
+    g = {
     name = "Git",
     g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
     j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
@@ -179,6 +194,11 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+  T = {
+    name = "Treesitter",
+    h = { "<cmd>TSHighlightCapturesUnderCursor<cr>", "Highlight" },
+    p = { "<cmd>TSPlaygroundToggle<cr>", "Playground" },
+    },
 }
 
 which_key.setup(setup)
