@@ -84,8 +84,12 @@ return packer.startup(function(use)
 	use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 
+    --Java
+	use "mfussenegger/nvim-jdtls"
+
 	-- Telescope
-	use("nvim-telescope/telescope.nvim")
+    use("nvim-telescope/telescope.nvim")
+
 
 	-- Treesitter
 	use({
@@ -100,6 +104,8 @@ return packer.startup(function(use)
 
 	-- Python auto-indent
 	use("Vimjas/vim-python-pep8-indent")
+    -- Renamer
+    use("qpkorr/vim-renamer")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

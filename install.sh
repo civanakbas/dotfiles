@@ -1,8 +1,5 @@
 echo Installing tmux...
 sudo apt install tmux
-echo Installing neovim...
-sudo add-apt-repository ppa:neovim-ppa/stable -y
-sudo apt install neovim
 sudo apt install mvp
 
 

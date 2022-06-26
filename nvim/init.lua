@@ -1,7 +1,7 @@
+require("user.plugins")
 require("user.options")
 require("user.autocommands")
 require("user.keymaps")
-require("user.plugins")
 require("user.colorscheme")
 require("user.impatient")
 require("user.cmp")
@@ -22,4 +22,4 @@ require("user.toggleterm")
 require("user.gps")
 require("user.winbar")
 require("user.zen-mode")
--- vim.cmd [[set colorcolumn=88]]
+--vim.cmd [[set colorcolumn=88]]
