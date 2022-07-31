@@ -46,6 +46,7 @@ alias ta='tmux attach -t 0'
 alias vim='nvim'
 alias gt='cd ~/Desktop/Machine\ learning/Graduation\ Thesis && conda activate gt'
 alias ivydocker='docker run --rm -it -v "$(pwd)":/ivy unifyai/ivy:latest'
+alias ls='lsd'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
