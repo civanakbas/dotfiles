@@ -1,5 +1,5 @@
-echo Installing tmux...
-pacman -S tmux mvp xsel npm python-pip ripgrep fd
+echo Installing dependencies
+pacman -S tmux mvp xsel npm python-pip ripgrep fd lsd
 
 pip install pynvim
 

@@ -18,12 +18,12 @@ case "$TERM" in
 esac
 
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
+# if [ "$color_prompt" = yes ]; then
+#     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+# else
+#     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+# fi
+# unset color_prompt force_color_prompt
 
 #My aliases
 alias steamapps='cd ~/.local/share/Steam/steamapps/common'
@@ -41,6 +41,7 @@ alias vim='nvim'
 alias gt='cd ~/Desktop/Machine\ learning/Graduation\ Thesis && conda activate gt'
 alias ivydocker='docker run --rm -it -v "$(pwd)":/ivy unifyai/ivy:latest'
 alias ls='lsd'
+alias pacman='sudo pacman'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
