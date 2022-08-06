@@ -8,8 +8,6 @@ alias ls='ls $LS_OPTIONS'
 export EDITOR=nvim
 export TERMINAL=alacritty
 
-export PATH="$HOME/.cargo/bin:$PATH"
-
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
@@ -26,10 +24,6 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
-
-
-#Conda path
-# export PATH="/home/civan/anaconda3/bin:$PATH"  # commented out by conda initialize
 
 #My aliases
 alias steamapps='cd ~/.local/share/Steam/steamapps/common'
@@ -52,14 +46,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
-
-# if tmux is executable, X is running, and not inside a tmux session, then try to attach.
-# if attachment fails, start a new session
-#if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ]; then
-#  [ -z "${TMUX}" ] && { tmux attach || tmux; } >/dev/null 2>&1
-#fi
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/civan/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -74,4 +60,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
 eval "$(starship init bash)"

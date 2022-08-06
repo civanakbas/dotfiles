@@ -9,6 +9,7 @@ window:
     columns: 143
     lines: 40
   opacity: 0.9
+  dynamic_title: false
 
 
 font:
@@ -37,7 +38,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 12.0
+  size: 13.0
 
 scrolling:
   history: 10000
