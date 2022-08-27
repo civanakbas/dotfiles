@@ -10,8 +10,8 @@ export EDITOR=nvim
 export TERMINAL=alacritty
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+HISTFILESIZE=200000
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in

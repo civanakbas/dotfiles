@@ -60,7 +60,7 @@ return packer.startup(function(use)
 	use({ "christianchiarulli/nvim-gps", branch = "text_hl" })
 	use("folke/zen-mode.nvim")
 	-- Colorschemes
-	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+	use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
 	use("lunarvim/darkplus.nvim")
 
 	-- cmp plugins
