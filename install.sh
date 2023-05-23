@@ -1,13 +1,16 @@
 echo Installing dependencies
-pacman -S tmux mvp xsel npm python-pip ripgrep fd lsd
+pacman -S tmux mvp xsel npm python-pip ripgrep fd lsd neovim
 
 pip install pynvim
+
+LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
 
 echo Cloning tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo Creating symlinks...
-rm -rf ~/.config/nvim
-ln -s ~/.dotfiles/nvim/ ~/.config/nvim
+
+rm -rf ~/.config/lvim
+ln -s ~/.dotfiles/lvim/ ~/.config
 rm ~/.gitconfig
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 rm ~/.bashrc

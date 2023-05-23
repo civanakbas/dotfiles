@@ -1,4 +1,5 @@
 #coloring for directories and stuff
+source ~/.ssh_stuff
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 export LS_OPTIONS='--color=auto'
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
@@ -38,7 +39,8 @@ alias ide='tmux split-window -v -p 30 && tmux split-window -h -p 66 && tmux spli
 alias kat='tmux kill-pane -a'
 alias killkde='killall plasmashell && kstart5 plasmashell'
 alias ta='tmux attach -t 0'
-alias vim='nvim'
+alias lvim='/home/civan/.local/bin/lvim'
+alias vim='lvim'
 alias gt='cd ~/Desktop/Machine\ learning/Graduation\ Thesis && conda activate gt'
 alias ivydocker='docker run --rm -it -v "$(pwd)":/ivy unifyai/ivy:latest'
 alias ls='lsd'
