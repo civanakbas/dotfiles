@@ -29,8 +29,8 @@ fi
 primary_display=$(xrandr --listactivemonitors | grep "^\ 0:" | awk '{print $4}')
 for display in $display_names; do
   if ! xrandr --listactivemonitors | grep -q "$display"; then
-    xrandr --output "$display" --auto --right-of "$primary_display"
-    echo "Enabled $display as the right of $primary_display"
+    xrandr --output "$display" --auto --left-of "$primary_display"
+    echo "Enabled $display as the left of $primary_display"
     exit 0
   fi
 done
