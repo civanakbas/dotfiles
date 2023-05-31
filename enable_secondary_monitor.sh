@@ -12,29 +12,21 @@ fi
 # Check if the script was called with a parameter
 if [[ $# -gt 0 ]]; then
   if [[ $1 == "disable" ]]; then
-    # Disable the secondary monitor if it is currently enabled
-    for display in $display_names; do
-      if xrandr --listactivemonitors | grep -q "$display"; then
-        xrandr --output "$display" --off
-        echo "Disabled $display"
-        exit 0
-      fi
-    done
-    echo "Error: Secondary monitor is already disabled."
-    exit 1
+    # Disable the primary monitor if it is currently enabled
+    if xrandr --listactivemonitors | grep -q "^\ 1:"; then
+      xrandr --output "HDMI-1" --off
+      echo "Disabled HDMI-1"
+      exit 0
+    else
+      echo "Error: HDMI-1 is already disabled."
+      exit 1
+    fi
   fi
 fi
 
-# Find the first inactive display and enable it as the right of the primary display
-primary_display=$(xrandr --listactivemonitors | grep "^\ 0:" | awk '{print $4}')
-for display in $display_names; do
-  if ! xrandr --listactivemonitors | grep -q "$display"; then
-    xrandr --output "$display" --auto --left-of "$primary_display"
-    echo "Enabled $display as the left of $primary_display"
-    exit 0
-  fi
-done
+# Enable HDMI-1 as the right of eDP-1
+xrandr --output "HDMI-1" --auto --right-of "eDP-1" --primary
+echo "Enabled HDMI-1 as the right of eDP-1"
 
-echo "Error: Unable to find an inactive display."
-exit 1
+exit 0
 

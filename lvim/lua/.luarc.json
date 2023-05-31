@@ -8,6 +8,7 @@
         "${3rd}/luv/library",
         "/home/civan/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/050a7848",
         "/home/civan/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/22d8f1a7",
-        "/home/civan/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/69b28ad4"
+        "/home/civan/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/69b28ad4",
+        "/home/civan/.local/share/lvim/mason/packages/lua-language-server/libexec/meta/24477c1b"
     ]
 }
