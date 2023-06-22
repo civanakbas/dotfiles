@@ -1,5 +1,7 @@
 #coloring for directories and stuff
 source ~/.ssh_stuff
+source ~/.dotfiles/.bash_functions.sh
+
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 export LS_OPTIONS='--color=auto'
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
