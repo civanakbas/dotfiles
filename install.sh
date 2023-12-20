@@ -1,5 +1,5 @@
 echo Installing dependencies
-pacman -S tmux mvp xsel npm python-pip ripgrep fd lsd neovim
+pacman -S tmux mpv xsel npm python-pip ripgrep fd lsd neovim
 
 pip install pynvim
 

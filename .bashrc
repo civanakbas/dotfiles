@@ -49,6 +49,7 @@ alias ls='lsd'
 alias pacman='sudo pacman'
 alias optst='optimus-manager --status'
 alias nvidiasw='optimus-manager --switch nvidia'
+alias intsw='optimus-manager --switch integrated'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
