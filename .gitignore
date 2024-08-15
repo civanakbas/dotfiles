@@ -1,5 +1,7 @@
 .config/nvim/plugin/
 .config/nvim/.git
-.config/tmux/.plugins
+.config/nvim/*.json
+.config/nvim/lua/plugins
+.config/tmux/plugins
 
 

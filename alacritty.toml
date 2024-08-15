@@ -1,0 +1,86 @@
+[colors.bright]
+black = "#575b70"
+blue = "#caa9fa"
+cyan = "#9aedfe"
+green = "#5af78e"
+magenta = "#ff92d0"
+red = "#ff6e67"
+white = "#e6e6e6"
+yellow = "#f4f99d"
+
+[colors.normal]
+black = "#000000"
+blue = "#caa9fa"
+cyan = "#8be9fd"
+green = "#50fa7b"
+magenta = "#ff79c6"
+red = "#ff5555"
+white = "#bfbfbf"
+yellow = "#f1fa8c"
+
+[colors.primary]
+background = "#282a36"
+foreground = "#f8f8f2"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 13.0
+
+[font.bold]
+family = "FiraCode NF"
+style = "Bold"
+
+[font.bold_italic]
+family = "FiraCode NF"
+style = "Bold Italic"
+
+[font.italic]
+family = "FiraCode NF"
+style = "Italic"
+
+[font.normal]
+family = "FiraCode NF"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "F1"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "F2"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "F3"
+mods = "Shift"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = false
+
+[shell]
+program = "/bin/bash"
+
+[window]
+dynamic_title = false
+opacity = 0.9
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.dimensions]
+columns = 143
+lines = 40
+
+[window.padding]
+x = 5
+y = 5
