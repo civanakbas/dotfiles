@@ -2,12 +2,12 @@
 
 # Determine the package manager
 if command - pacman &>/dev/null; then
-    PACKAGE_MANAGER="pacman"
+  PACKAGE_MANAGER="pacman"
 elif command -v apt-get &>/dev/null; then
-    PACKAGE_MANAGER="apt-get"
+  PACKAGE_MANAGER="apt-get"
 else
-    echo "Unsupported package manager. Please install packages manually."
-    exit 1
+  echo "Unsupported package manager. Please install packages manually."
+  exit 1
 fi
 
 print_step() {
@@ -50,9 +50,9 @@ current_step=1
 print_step $current_step "Installing dependencies..." $total_steps
 
 if [ "$PACKAGE_MANAGER" = "pacman" ]; then
-    dependencies=(tmux mpv xsel xclip npm python-pip ripgrep fd lsd neovim stow wget unzip starship)
+  dependencies=(tmux mpv xsel xclip npm python-pip ripgrep fd lsd neovim stow wget unzip starship)
 elif [ "$PACKAGE_MANAGER" = "apt-get" ]; then
-    dependencies=(tmux mpv xsel xclip npm python3-pip ripgrep fd-find stow wget unzip)
+  dependencies=(tmux mpv xsel xclip npm python3-pip ripgrep fd-find stow wget unzip)
 fi
 
 for package in "${dependencies[@]}"; do
@@ -61,35 +61,35 @@ done
 
 # Special handling for fd-find on Ubuntu/Debian
 if [ "$PACKAGE_MANAGER" = "apt-get" ]; then
-    # Create symlink for fd
-    if ! command -v fd &>/dev/null; then
-        echo "Creating symlink for fd"
-        sudo ln -s "$(which fdfind)" /usr/local/bin/fd
-    fi
+  # Create symlink for fd
+  if ! command -v fd &>/dev/null; then
+    echo "Creating symlink for fd"
+    sudo ln -s "$(which fdfind)" /usr/local/bin/fd
+  fi
 fi
 
 # Step 2: Install lsd (for Ubuntu/Debian)
 if [ "$PACKAGE_MANAGER" = "apt-get" ]; then
-    current_step=$((current_step + 1))
-    print_step $current_step "Installing lsd..." $total_steps
-    if command -v lsd &>/dev/null; then
-        echo "lsd is already installed."
-    else
-        echo "Installing lsd..."
-        wget https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb -O /tmp/lsd.deb
-        sudo dpkg -i /tmp/lsd.deb
-        rm /tmp/lsd.deb
-    fi
+  current_step=$((current_step + 1))
+  print_step $current_step "Installing lsd..." $total_steps
+  if command -v lsd &>/dev/null; then
+    echo "lsd is already installed."
+  else
+    echo "Installing lsd..."
+    wget https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb -O /tmp/lsd.deb
+    sudo dpkg -i /tmp/lsd.deb
+    rm /tmp/lsd.deb
+  fi
 fi
 
 # Step 3: Install Neovim 0.9
 current_step=$((current_step + 1))
 print_step $current_step "Installing Neovim unstable..." $total_steps
 if [ "$PACKAGE_MANAGER" = "apt-get" ]; then
-    sudo apt-get remove -y neovim
-    sudo add-apt-repository ppa:neovim-ppa/unstable -y
-    sudo apt-get update
-    sudo apt-get install -y neovim
+  sudo apt-get remove -y neovim
+  sudo add-apt-repository ppa:neovim-ppa/unstable -y
+  sudo apt-get update
+  sudo apt-get install -y neovim
 fi
 # For pacman, Neovim should already be the latest version
 
@@ -98,15 +98,15 @@ current_step=$((current_step + 1))
 print_step $current_step "Installing Starship prompt..." $total_steps
 
 if command -v starship &>/dev/null; then
-    echo "Starship is already installed."
+  echo "Starship is already installed."
 else
-    if [ "$PACKAGE_MANAGER" = "pacman" ]; then
-        # Starship was installed in dependencies
-        echo "Starship installed via pacman."
-    elif [ "$PACKAGE_MANAGER" = "apt-get" ]; then
-        echo "Installing Starship via official install script..."
-        curl -sS https://starship.rs/install.sh | sh -s -- --yes
-    fi
+  if [ "$PACKAGE_MANAGER" = "pacman" ]; then
+    # Starship was installed in dependencies
+    echo "Starship installed via pacman."
+  elif [ "$PACKAGE_MANAGER" = "apt-get" ]; then
+    echo "Installing Starship via official install script..."
+    curl -sS https://starship.rs/install.sh | sh -s -- --yes
+  fi
 fi
 
 # Step 5: Install Python dependencies
@@ -115,12 +115,12 @@ print_step $current_step "Installing Python dependencies..." $total_steps
 
 # Determine pip command
 if command -v pip &>/dev/null; then
-    PIP_CMD="pip"
+  PIP_CMD="pip"
 elif command -v pip3 &>/dev/null; then
-    PIP_CMD="pip3"
+  PIP_CMD="pip3"
 else
-    echo "pip is not installed. Exiting."
-    exit 1
+  echo "pip is not installed. Exiting."
+  exit 1
 fi
 
 $PIP_CMD install pynvim --user
