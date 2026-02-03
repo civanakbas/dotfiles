@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Determine the package manager
-if command - pacman &>/dev/null; then
+if command -v pacman &>/dev/null; then
   PACKAGE_MANAGER="pacman"
 elif command -v apt-get &>/dev/null; then
   PACKAGE_MANAGER="apt-get"
