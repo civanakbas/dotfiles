@@ -28,21 +28,22 @@ TERM = "xterm-256color"
 [font]
 size = 13.0
 
+[font.normal]
+family = "FiraCode Nerd Font Mono"
+style = "Regular"
+
 [font.bold]
-family = "FiraCode NF"
+family = "FiraCode Nerd Font Mono"
 style = "Bold"
 
-[font.bold_italic]
-family = "FiraCode NF"
-style = "Bold Italic"
-
 [font.italic]
-family = "FiraCode NF"
+family = "FiraCode Nerd Font Mono"
 style = "Italic"
 
-[font.normal]
-family = "FiraCode NF"
-style = "Regular"
+[font.bold_italic]
+family = "FiraCode Nerd Font Mono"
+style = "Bold Italic"
+
 
 [[keyboard.bindings]]
 action = "IncreaseFontSize"
@@ -66,7 +67,7 @@ multiplier = 3
 [selection]
 save_to_clipboard = false
 
-[shell]
+[terminal.shell]
 program = "/bin/bash"
 
 [window]
@@ -84,3 +85,5 @@ lines = 40
 [window.padding]
 x = 5
 y = 5
+
+[terminal]
